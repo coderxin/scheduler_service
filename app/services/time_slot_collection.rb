@@ -7,6 +7,8 @@ class TimeSlotCollection
     :time_slot_duration_in_seconds,
     to: :config
 
+  delegate :values, to: :time_slots_hash
+
   def initialize(date, config)
     @date = date
     @config = config
@@ -14,8 +16,6 @@ class TimeSlotCollection
 
     build_daily_time_slots
   end
-
-  delegate :values, to: :time_slots_hash
 
   def delete_by(time_slot)
     blocked_time_slots = time_slots_hash.values.find_all { |ts| ts.overlaps?(time_slot) }
