@@ -77,3 +77,6 @@ RSpec/ExampleLength:
 
 RSpec/NestedGroups:
   Max: 4
+
+Rails/BulkChangeTable:
+  Enabled: false
