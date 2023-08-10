@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "11636b1b-4dc8-4654-87b7-0227f36c8a66",
+		"name": "Denteo Engineering Excercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27745158"
+	},
+	"item": [
+		{
+			"name": "GET api/v1/doctors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/doctors",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET api/v1/doctors/:doctor_id/schedule",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "schedule[from_date]",
+							"value": "2021-01-04",
+							"type": "text"
+						},
+						{
+							"key": "schedule[to_date]",
+							"value": "2021-01-07",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/doctors/2/schedule",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"doctors",
+						"2",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET api/v1/doctors/:doctor_id/appointments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/doctors/2/appointments",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"doctors",
+						"2",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
