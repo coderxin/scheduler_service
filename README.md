@@ -1,6 +1,6 @@
 # README
 
-This repository contains solution for the https://github.com/huerlisi/engineering-excercise problem.
+This repository contains the solution for the https://github.com/huerlisi/engineering-excercise problem.
 
 Outcome: JSON API to return free time slots for dentist appointment booking.
 
@@ -8,7 +8,7 @@ Outcome: JSON API to return free time slots for dentist appointment booking.
 
 ### Using Docker
 
-To build image and start docker-compose, please run (it will make application available under `localhost:3000`):
+To build an image and start docker-compose, please run (it will make the application available under `localhost:3000`):
 ```sh
 sh start.sh
 ```
@@ -20,7 +20,7 @@ sh stop.sh
 
 To perform cleanup (stop containers and prune the system):
 ```sh
-sh stop.sh
+sh clean.sh
 ```
 
 ### Local setup
@@ -93,10 +93,10 @@ curl --request GET 'localhost:3000/api/v1/doctors'
 - add more specs
 - configure cors
 - introduce authentication for patients
-- add validation logic for the models (for example appointment creation and conflict management with available slots or appointments)
+- add validation logic for the models (for example, appointment creation and conflict management with available slots or appointments)
 - add related patient functionality
 - add functionality to manage appointments
-- add pagination (for example using kaminari) for response time optimisation
+- add pagination (for example, using kaminari) for response time optimisation
 - add swagger API documentation (for example using swagger-blocks gem)
 - add Github actions to run specs, rubocop and deploy to staging and production server
 - move TimeSlot and TimeSlotCollection from app/services folder
